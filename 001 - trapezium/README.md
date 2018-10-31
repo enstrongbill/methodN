@@ -4,5 +4,4 @@
 ![](http://s1.sinaimg.cn/large/005PxX9dzy7oPeBpvMId0&690)
 
 
-clip-path-maker
-http://bennettfeely.com/clippy/
+[clip-path-maker](http://bennettfeely.com/clippy/)
