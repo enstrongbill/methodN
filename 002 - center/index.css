@@ -1,10 +1,11 @@
 body{
     height: 100%;
 }
-.m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8, .m9, .m10{
+div[class*='m']{
     width: 200px;
     height: 200px;
     float: left;
+
     margin: 2px;
     border: 1px solid #cecece;
 }
@@ -61,18 +62,47 @@ div[class*="m"] > div{
     display: inline-block;
     vertical-align: middle;
 }
+
 .m6{
-    display: table-cell;
-    text-align: center;
-    vertical-align: center;
+    display: flex;
     
 }
 .m6 > div{
-    display: inline-block;
-    
+    margin: auto;
     background: grey;
 }
 
+.m7{
+    display: flex;
+    justify-content: center;
+}
+.m7 > div{
+    align-self: center;
+    background: gold;
+}
+
+.m8{
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: '. . .'
+                         '. mr3x .'
+                         '. . .';
+
+}
+.m8 > div{
+    grid-area: mr3x;
+    background: silver;
+}
+
+.m9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m9 > div{
+    background: brown;
+}
 .m10{
     display: flex;
     align-items: center;
@@ -80,4 +110,68 @@ div[class*="m"] > div{
 }
 .m10 > div{
     background: purple;
+}
+
+.m11{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.m11 > div{
+    background: rgb(80, 114, 114);
+}
+
+.m12{
+    display: grid;
+    justify-content: center;
+
+}
+.m12 > div{
+    align-self: center;
+    background: rgb(0, 255, 149);
+}
+
+.m13{
+    display: grid;
+    place-items: center;
+}
+.m13 > div{
+    background: wheat;
+}
+
+.m14{
+    display: grid;
+    place-content: center;
+}
+.m14 > div{
+    background: salmon
+}
+
+.m15{
+    display: grid;
+}
+.m15 > div{
+    margin: auto;
+    background: pink;
+}
+
+.m16{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    float: none;
+}
+.m16 > div{
+    background: powderblue;
+    margin: auto;
+}
+
+.m17{
+    writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+}
+.m17 > div{
+    writing-mode: lr-tb;
+    margin: auto;
+    background: tan;
 }
